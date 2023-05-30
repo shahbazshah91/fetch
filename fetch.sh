@@ -5,9 +5,6 @@ read -p "Enter the application name: " website_name
 read -p "Enter the date (YYYY-MM-DD): " date
 read -p "Enter the time (HH:MM:SS): " time_b
 
-echo -e ""
-#echo "Size of Webfiles= $(/usr/bin/du -sh /home/master/applications/$website_name/ | awk '{print $1}')  and  Size of DB= $(/usr/bin/du -sh /var/lib/mysql/$website_name/ | awk '{print $1}')"
-
 datetime="${date}T${time_b}"
 command="/var/cw/scripts/bash/duplicity_restore.sh --src $website_name -r --dst './' --time '$datetime'"
 
