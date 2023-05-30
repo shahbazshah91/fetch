@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo -e "This script will fetch the the full backup and will place it in the directory you're currently in.\n"
-read -p "Enter the application name: " website_name
+echo -n "Enter the application name: "
+read website_name
 read -p "Enter the date (YYYY-MM-DD): " date
 read -p "Enter the time (HH:MM:SS): " time_b
 
